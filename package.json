@@ -1,0 +1,18 @@
+{
+  "name": "obliquebot",
+  "version": "0.0.1",
+  "description": "A Discord bot for Logickal Musick to retrieve Oblique Strategies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Dickens",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.18.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0"
+  }
+}
