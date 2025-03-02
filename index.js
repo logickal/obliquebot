@@ -4,7 +4,7 @@ const path = require('path');
 const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
 require('dotenv').config();
 
-const token = process.env.DISCORD_TOKEN;
+const { token } = process.env.DISCORD_TOKEN;
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -46,6 +46,7 @@ client.once(Events.ClientReady, readyClient => {
 client.login(token);
 
 client.on(Events.InteractionCreate, async interaction => {
+    console.log('Received Interaction:', interaction);
     if(!interaction.isChatInputCommand()) return;
 
     const command = interaction.client.commands.get(interaction.commandName);
